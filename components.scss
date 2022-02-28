@@ -5,8 +5,12 @@
         font-size: 30px;
         margin-top: 50px;
         margin-bottom: 25px;
-
-// add media query for font size
+        @media screen and (min-width: 768px) and (max-width: 990px) {
+            font-size: 40px;
+        }
+        @media screen and (min-width: 991px) {
+            font-size: 55px;
+        }
     }
 
     &__calculator {
@@ -16,6 +20,14 @@
         width: 240px;
         height: 360px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @media screen and (min-width: 768px) and (max-width: 990px) {
+            width: 480px;
+            height: 620px;
+        }
+        @media screen and (min-width: 991px) {
+            width: 480px;
+            height: 620px;
+        }
 // Add media query for width and height of calculator
         &__display {
             background-color: $color-white;
@@ -23,12 +35,15 @@
             height: 60px;
             border: solid 2px $color-accent;
             border-radius: 5px;
-            font-size: 26px;;
+            font-size: 32px;;
             margin-top: 25px;
+            @media screen and (min-width: 768px){
+                width: 356px;
+                height: 120px;
+            }
         }        
 
         &__pad {
-            
             margin: 25px;
             &__button {
                 background-color: $color-accent;
@@ -38,9 +53,20 @@
                 height: 35px;
                 margin: 4px;
                 text-align: center;
+                font-size: 22px;
+                @media screen and (min-width: 768px) {
+                    width: 70px;
+                    height: 70px;
+                    margin: 8px;
+                }
             }
         }
     }
 
         
 }
+
+#positive-negative-button {
+    font-size: 16px;
+}
+
