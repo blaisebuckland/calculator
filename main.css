@@ -1,25 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 * {
   font-family: "Titillium Web", sans-serif;
-  color: #2E7077;
+  color: #414361;
   font-size: 24px;
 }
 
 .body {
-  background-color: #F3F6F6;
+  background-image: linear-gradient(#fad8e8, #F1489A);
+  height: 100vh;
 }
 .body__heading {
   font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 .body__calculator {
   background-color: #D9F7FA;
-  border: solid 3px #F1489A;
+  border: solid 4px #F1489A;
   border-radius: 10px;
   width: 240px;
   height: 360px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.body__calculator__display {
+  background-color: #F3F6F6;
+  width: 178px;
+  height: 60px;
+  border: solid 2px #F1489A;
+  border-radius: 5px;
+  font-size: 26px;
+  margin-top: 25px;
 }
 .body__calculator__pad {
-  margin: auto;
+  margin: 25px;
 }
 .body__calculator__pad__button {
   background-color: #F1489A;
@@ -36,7 +49,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   margin: auto;
 }
 .body__calculator {
@@ -44,6 +56,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 .body__calculator__pad {
   display: flex;
