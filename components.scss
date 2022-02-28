@@ -1,0 +1,33 @@
+.body {
+    background-color: $color-white;
+
+    &__heading {
+        font-size: 30px;
+
+// add media query for font size
+    }
+
+    &__calculator {
+        background-color: $color-light;
+        border: solid 3px $color-accent;
+        border-radius: 10px;
+        width: 240px;
+        height: 360px;
+// Add media query for width and height of calculator
+        &__pad {
+            
+            margin: auto;
+            &__button {
+                background-color: $color-accent;
+                color: $color-white;
+                border-radius: 5px;
+                width: 35px;
+                height: 35px;
+                margin: 4px;
+                text-align: center;
+            }
+        }
+    }
+
+        
+}
