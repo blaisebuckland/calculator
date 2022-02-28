@@ -1,22 +1,35 @@
 .body {
-    background-color: $color-white;
-
+    background-image: linear-gradient(#fad8e8, #F1489A);
+    height: 100vh;
     &__heading {
         font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 25px;
 
 // add media query for font size
     }
 
     &__calculator {
         background-color: $color-light;
-        border: solid 3px $color-accent;
+        border: solid 4px $color-accent;
         border-radius: 10px;
         width: 240px;
         height: 360px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 // Add media query for width and height of calculator
+        &__display {
+            background-color: $color-white;
+            width: 178px;
+            height: 60px;
+            border: solid 2px $color-accent;
+            border-radius: 5px;
+            font-size: 26px;;
+            margin-top: 25px;
+        }        
+
         &__pad {
             
-            margin: auto;
+            margin: 25px;
             &__button {
                 background-color: $color-accent;
                 color: $color-white;
