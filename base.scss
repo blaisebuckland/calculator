@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+$font: "Titillium Web", sans-serif;
+$color-dark: #2E7077;
+$color-light: #D9F7FA;
+$color-accent: #F1489A;
+$color-white: #F3F6F6;
+* {
+    font-family: $font;
+    color: $color-dark;
+}
