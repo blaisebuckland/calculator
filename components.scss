@@ -52,11 +52,13 @@
                     font-size: 46px;
                 }
             }
+            
         }        
 
         &__pad {
             margin: 25px;
-            &__button {
+
+            & > * {
                 background-color: $color-accent;
                 color: $color-white;
                 border-radius: 5px;
@@ -71,13 +73,21 @@
                     margin: 8px;
                 }
             }
+            &__equals {
+                width: 74px;
+                @media screen and (min-width: 768px) {
+                    width: 158px;
+                    height: 75px;
+                    margin: 8px;
+                }
+            }
+            &__cancel {
+                width: 74px;
+                @media screen and (min-width: 768px) {
+                    width: 158px;
+                    height: 75px;
+                    margin: 8px;
+                }
+            }
         }
 }
-
-#positive-negative-button {
-    font-size: 16px; 
-    @media screen and (min-width: 768px){
-        font-size: 20px;
-    }
-}
-
