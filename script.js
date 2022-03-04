@@ -1,96 +1,84 @@
-// Display
-const calculatorDisplay = document.querySelector(".calculator__display__text");
-// Buttons
-const zeroButton = document.querySelector("#zero-button");
-const oneButton = document.querySelector("#one-button");
-const twoButton = document.querySelector("#two-button");
-const threeButton = document.querySelector("#three-button");
-const fourButton = document.querySelector("#four-button");
-const fiveButton = document.querySelector("#five-button");
-const sixButton = document.querySelector("#six-button");
-const sevenButton = document.querySelector("#seven-button");
-const eightButton = document.querySelector("#eight-button");
-const nineButton = document.querySelector("#nine-button");
-const cancelButton = document.querySelector("#cancel-button");
-const bracketsButton =document.querySelector("#brackets-button");
-const percentButton =document.querySelector("#percent-button");
-const divideButton =document.querySelector("#divide-button");
-const multiplyButton =document.querySelector("#multiply-button");
-const minusButton =document.querySelector("#minus-button");
-const plusButton =document.querySelector("#plus-button");
-const positiveNegativeButton =document.querySelector("#positive-negative-button");
-const decimalButton =document.querySelector("#decimal-button");
-const equalsButton =document.querySelector("#equals-button");
+// Selectors
+const displayText = document.querySelector(".calculator__display__text");
+const numberButtons = document.querySelectorAll(".calculator__pad__number")
+const cancelButton = document.querySelector(".calculator__pad__cancel");
+const percentButton =document.querySelector(".calculator__pad__percent");
+const operatorButtons =document.querySelectorAll(".calculator__pad__operator");
+const equalsButton =document.querySelector(".calculator__pad__equals");
 
-/* MAKE IT SO THAT THE INPUT ONLY ALLOWS MAX 33 CHARACTERS
- if (calculatorDisplay.innerHTML.value.length > 24) {
+// Variables
+let currentCharacter = "";
+let calculation = "";
+let calculationResult = "";
+let inputLengthBelowMax ="";
 
-} */
-
-
-const cancel = () => {
-    calculatorDisplay.innerHTML = "";
+// Reusable functions
+const checkInputLength = () => {
+    if (displayText.innerHTML.length < 33) {
+        inputLengthBelowMax = true;
+    } else {
+        inputLengthBelowMax = false;
+    }
 }
-cancelButton.addEventListener("click", cancel);
 
-zeroButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 0;
+// Number buttons
+numberButtons.forEach(button => {
+    button.addEventListener(("click"), (event) => {
+        checkInputLength();
+        if (inputLengthBelowMax === true) {
+            currentCharacter = event.target.innerHTML;
+            displayText.innerHTML += currentCharacter;
+        }
+    })
+});
+
+// Simple operator buttons
+
+operatorButtons.forEach(button => {
+    button.addEventListener(("click"), (event) => {
+        checkInputLength();
+        if (inputLengthBelowMax === true) {
+            currentCharacter = event.target.innerHTML;
+            displayText.innerHTML += event.target.innerHTML;
+        }
+    })
 })
+//displayText.innerHTML.includes("+"||"-"||"/"||"x" === false) 
 
-oneButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 1;
-})
+// Cancel - delete last character if pressed once, and delete all if pressed twice
+cancelButton.addEventListener("click", () => {
+    if (currentCharacter == "c") {
+        displayText.innerHTML = "";
+        currentCharacter = "c";
+    } else {
+        displayText.innerHTML = displayText.innerHTML.slice(0, displayText.innerHTML.length-1);
+        currentCharacter = "c";
+    }
+});
 
-twoButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 2;
-})
-
-threeButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 3;
-})
-
-fourButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 4;
-})
-
-fiveButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 5;
-})
-
-sixButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 6;
-})
-
-sevenButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 7;
-})
-
-eightButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 8;
-})
-
-nineButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += 9;
-})
-
-// brackets button - toggle to add opening or closing bracket
+// Percent
 
 percentButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML = calculatorDisplay.innerHTML/100;
+    displayText.innerHTML = displayText.innerHTML/100;
+    
 })
 
-divideButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += "/";
-})
+// Equals
 
-multiplyButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += "*";
-})
-
-minusButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += "-";
-})
-
-plusButton.addEventListener("click", () => {
-    calculatorDisplay.innerHTML += "+";
-})
+equalsButton.addEventListener("click", () => {
+        if (displayText.innerHTML.includes("x")== true) {
+            calculation = displayText.innerHTML.split("x")
+            calculationResult = Number(calculation[0]) * Number(calculation[1]);
+        } else if (displayText.innerHTML.includes("/")== true) {
+            calculation = displayText.innerHTML.split("/")
+            calculationResult = Number(calculation[0]) / Number(calculation[1]);
+        } else if (displayText.innerHTML.includes("+")== true) {
+            calculation = displayText.innerHTML.split("+")
+            calculationResult = Number(calculation[0]) + Number(calculation[1]);
+        } else if (displayText.innerHTML.includes("-")== true) {
+            calculation = displayText.innerHTML.split("-")
+            calculationResult = Number(calculation[0]) - Number(calculation[1]);
+        }
+        displayText.innerHTML = calculationResult;  
+    }
+)
