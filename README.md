@@ -1,5 +1,5 @@
-# Calculator
-A calculator made using JavaScript. The calculator can perform basics mathematical operations (+,-,x,÷). The calculator can also calculate percentages and handle decimals.
+# JavaScript Calculator
+This calculator can perform basics mathematical operations (+,-,x,÷). The calculator can also calculate percentages and handle decimals.
 
 ## Technology
 * HTML
