@@ -8,7 +8,7 @@ This calculator can perform basics mathematical operations (+,-,x,÷). The calcu
 * Git
 
 ## Design
-* Designed using Figma: https://www.figma.com/file/B12mt0sk5co4Zn5YlLWDJl/Calculator?node-id=0%3A1 
+* Designed using [Figma](https://www.figma.com/file/B12mt0sk5co4Zn5YlLWDJl/Calculator?node-id=0%3A1)
 * The layout of the calculator is based on a mobile phone calculator.
 * Responsive across screen sizes.
 
@@ -16,5 +16,5 @@ This calculator can perform basics mathematical operations (+,-,x,÷). The calcu
 <img src="https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg" alt="calculator-image" width=300>
 
 ## Links
-* [GitHub Repository](https://github.com/blaisebuckland/calculator "GitHub Repository")
+* [GitHub Repository](https://github.com/blaisebuckland/calculator)
 * ADD LINK TO CALCULATOR
