@@ -5,9 +5,7 @@ This calculator can perform basics mathematical operations (+,-,x,÷). The calcu
 * HTML
 * SCSS & BEM
 * JavaScript
-
-## Link to Calculator
-ADD LINK HERE
+* Git
 
 ## Design
 * Designed using Figma: https://www.figma.com/file/B12mt0sk5co4Zn5YlLWDJl/Calculator?node-id=0%3A1 
@@ -15,4 +13,8 @@ ADD LINK HERE
 * Responsive across screen sizes.
 
 ## Images
-![calculator-preview-image](https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg | width:150)
+![calculator-preview-image](https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg)
+
+## Links
+* [GitHub Repository] (https://github.com/blaisebuckland/calculator)
+* ADD LINK TO CALCULATOR
