@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
 
-$font: "Titillium Web", sans-serif;
+$font: "Cairo", sans-serif;
 $color-dark: #414361;
 $color-light: #D9F7FA;
 $color-accent: #F1489A;
+$color-accent-dark: #e60572;
 $color-white: #F3F6F6;
 * {
     font-family: $font;

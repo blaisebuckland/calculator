@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap");
 * {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Cairo", sans-serif;
   color: #414361;
   font-size: 24px;
 }
@@ -12,17 +12,17 @@
 
 .heading {
   font-size: 30px;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-top: 15vh;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .heading {
-    font-size: 40px;
+    font-size: 55px;
   }
 }
 @media screen and (min-width: 991px) {
   .heading {
-    font-size: 55px;
+    font-size: 72px;
   }
 }
 
@@ -63,7 +63,7 @@
 }
 .calculator__display__text {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   right: 4px;
   font-size: 26px;
   line-height: 85%;
@@ -72,6 +72,7 @@
 @media screen and (min-width: 768px) {
   .calculator__display__text {
     font-size: 46px;
+    bottom: 20px;
   }
 }
 .calculator__pad {
@@ -85,31 +86,36 @@
   height: 35px;
   margin: 4px;
   text-align: center;
-  font-size: 23px;
+  font-size: 20px;
+  line-height: 0.8;
 }
 @media screen and (min-width: 768px) {
   .calculator__pad > * {
     width: 75px;
     height: 75px;
     margin: 8px;
+    font-size: 34px;
   }
 }
+.calculator__pad > *:hover {
+  background-color: #e60572;
+}
 .calculator__pad__equals {
-  width: 74px;
+  width: 78px;
 }
 @media screen and (min-width: 768px) {
   .calculator__pad__equals {
-    width: 158px;
+    width: 164px;
     height: 75px;
     margin: 8px;
   }
 }
 .calculator__pad__cancel {
-  width: 74px;
+  width: 78px;
 }
 @media screen and (min-width: 768px) {
   .calculator__pad__cancel {
-    width: 158px;
+    width: 164px;
     height: 75px;
     margin: 8px;
   }
@@ -128,7 +134,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 12vh auto 20vh auto;
 }
 .calculator__pad {
   display: flex;

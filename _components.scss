@@ -4,13 +4,13 @@
     }
 .heading {
     font-size: 30px;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 15vh;
+    margin-bottom: 0;
     @media screen and (min-width: 768px) and (max-width: 990px) {
-        font-size: 40px;
+        font-size: 55px;
     }
     @media screen and (min-width: 991px) {
-        font-size: 55px;
+        font-size: 72px;
     }
 }
 .calculator {
@@ -43,13 +43,14 @@
             }
             &__text{
                 position: absolute;
-                bottom:5px;
+                bottom:10px;
                 right: 4px;
                 font-size: 26px;
                 line-height: 85%;
                 word-break: break-all;
                 @media screen and (min-width: 768px){
                     font-size: 46px;
+                    bottom:20px;
                 }
             }
             
@@ -66,28 +67,36 @@
                 height: 35px;
                 margin: 4px;
                 text-align: center;
-                font-size: 23px;
+                font-size: 20px;
+                line-height: 0.8;
                 @media screen and (min-width: 768px) {
                     width: 75px;
                     height: 75px;
                     margin: 8px;
+                    font-size: 34px;
                 }
             }
+
+            & > *:hover {
+                background-color: $color-accent-dark;
+            }
+
             &__equals {
-                width: 74px;
+                width: 78px;
                 @media screen and (min-width: 768px) {
-                    width: 158px;
+                    width: 164px;
                     height: 75px;
                     margin: 8px;
                 }
             }
             &__cancel {
-                width: 74px;
+                width: 78px;
                 @media screen and (min-width: 768px) {
-                    width: 158px;
+                    width: 164px;
                     height: 75px;
                     margin: 8px;
                 }
             }
         }
 }
+
