@@ -13,8 +13,7 @@ This calculator can perform basics mathematical operations (+,-,x,÷). The calcu
 * Responsive across screen sizes.
 
 ## Images
-![calculator-preview-image](https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg| width=150px)
-<img src="https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg" width=300>
+<img src="https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg" alt="calculator-image" width=300>
 
 ## Links
 * [GitHub Repository](https://github.com/blaisebuckland/calculator "GitHub Repository")
