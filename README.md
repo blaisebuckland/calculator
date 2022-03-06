@@ -15,4 +15,4 @@ ADD LINK HERE
 * Responsive across screen sizes.
 
 ## Images
-![calculator-preview-image](https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg)
+![calculator-preview-image](https://github.com/blaisebuckland/calculator/blob/main/Calculator-image.jpg | width:150)
