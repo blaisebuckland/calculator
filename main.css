@@ -74,7 +74,7 @@
 .calculator__pad {
   margin: 25px;
 }
-.calculator__pad > * {
+.calculator__pad__button {
   background-color: #F1489A;
   color: #F3F6F6;
   border-radius: 5px;
@@ -86,15 +86,12 @@
   line-height: 0.8;
 }
 @media screen and (min-width: 768px) {
-  .calculator__pad > * {
+  .calculator__pad__button {
     width: 52.5px;
     height: 52.5px;
     margin: 6px;
     font-size: 34px;
   }
-}
-.calculator__pad > *:hover {
-  background-color: #e60572;
 }
 .calculator__pad__button--equals {
   width: 78px;
@@ -115,6 +112,9 @@
     height: 52.5px;
     margin: 6px;
   }
+}
+.calculator__pad__button:hover {
+  background-color: #e60572;
 }
 
 .body {

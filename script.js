@@ -1,11 +1,11 @@
 // Selectors
 const displayText = document.querySelector(".calculator__display__text");
-const numberButtons = document.querySelectorAll(".calculator__pad__number")
-const cancelButton = document.querySelector(".calculator__pad__cancel");
-const percentButton = document.querySelector(".calculator__pad__percent");
-const decimalButton = document.querySelector(".calculator__pad__decimal");
-const operatorButtons =document.querySelectorAll(".calculator__pad__operator");
-const equalsButton = document.querySelector(".calculator__pad__equals");
+const numberButtons = document.querySelectorAll(".calculator__pad__button--number")
+const cancelButton = document.querySelector(".calculator__pad__button--cancel");
+const percentButton = document.querySelector(".calculator__pad__button--percent");
+const decimalButton = document.querySelector(".calculator__pad__button--decimal");
+const operatorButtons =document.querySelectorAll(".calculator__pad__button--operator");
+const equalsButton = document.querySelector(".calculator__pad__button--equals");
 
 // Variables
 let currentCharacter = "";
@@ -34,8 +34,7 @@ numberButtons.forEach(button => {
     })
 });
 
-// Simple operator buttons
-
+// Operator buttons
 operatorButtons.forEach(button => {
     button.addEventListener("click", (event) => {
         checkInputLength();
@@ -68,7 +67,6 @@ operatorButtons.forEach(button => {
 })
 
 // Cancel - delete last character if pressed once, and delete all if pressed twice
-
 cancelButton.addEventListener("click", () => {
     if (currentCharacter == "c") {
         displayText.innerHTML = "";
@@ -80,24 +78,22 @@ cancelButton.addEventListener("click", () => {
 });
 
 // Percent
-
 percentButton.addEventListener("click", () => {
     displayText.innerHTML = displayText.innerHTML/100;
     
 })
 
 // Decimal
-
 decimalButton.addEventListener(("click"), () => {
-    if (inputLengthBelowMax === true) {
+    checkInputLength();
+    if (inputLengthBelowMax === true && currentCharacter != event.target.innerHTML) {
         currentCharacter = event.target.innerHTML;
         displayText.innerHTML += currentCharacter;
     }
 })
 
 // Equals
-
-equalsButton.addEventListener("click", () => {
+equalsButton.addEventListener("click", (event) => {
         if (displayText.innerHTML.includes("+")== true) {
             calculation = displayText.innerHTML.split("+");
             calculationResult = Number(calculation[0]) + Number(calculation[1]);
