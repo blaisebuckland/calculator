@@ -33,17 +33,13 @@
   width: 240px;
   height: 360px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 12vh auto 20vh auto;
 }
-@media screen and (min-width: 768px) and (max-width: 990px) {
+@media screen and (min-width: 768px) {
   .calculator {
-    width: 480px;
-    height: 680px;
-  }
-}
-@media screen and (min-width: 991px) {
-  .calculator {
-    width: 480px;
-    height: 680px;
+    width: 360px;
+    height: 540px;
+    margin: auto;
   }
 }
 .calculator__display {
@@ -57,8 +53,8 @@
 }
 @media screen and (min-width: 768px) {
   .calculator__display {
-    width: 356px;
-    height: 120px;
+    width: 270px;
+    height: 130px;
   }
 }
 .calculator__display__text {
@@ -91,33 +87,33 @@
 }
 @media screen and (min-width: 768px) {
   .calculator__pad > * {
-    width: 75px;
-    height: 75px;
-    margin: 8px;
+    width: 52.5px;
+    height: 52.5px;
+    margin: 6px;
     font-size: 34px;
   }
 }
 .calculator__pad > *:hover {
   background-color: #e60572;
 }
-.calculator__pad__equals {
+.calculator__pad__button--equals {
   width: 78px;
 }
 @media screen and (min-width: 768px) {
-  .calculator__pad__equals {
-    width: 164px;
-    height: 75px;
-    margin: 8px;
+  .calculator__pad__button--equals {
+    width: 115px;
+    height: 52.5px;
+    margin: 6px;
   }
 }
-.calculator__pad__cancel {
+.calculator__pad__button--cancel {
   width: 78px;
 }
 @media screen and (min-width: 768px) {
-  .calculator__pad__cancel {
-    width: 164px;
-    height: 75px;
-    margin: 8px;
+  .calculator__pad__button--cancel {
+    width: 115px;
+    height: 52.5px;
+    margin: 6px;
   }
 }
 

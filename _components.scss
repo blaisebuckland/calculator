@@ -20,13 +20,11 @@
     width: 240px;
     height: 360px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    @media screen and (min-width: 768px) and (max-width: 990px) {
-        width: 480px;
-        height: 680px;
-    }
-    @media screen and (min-width: 991px) {
-        width: 480px;
-        height: 680px;
+    margin: 12vh auto 20vh auto;
+    @media screen and (min-width: 768px) {
+        width: 360px;
+        height: 540px;
+        margin: auto;
     }
 
         &__display {
@@ -38,8 +36,8 @@
             border-radius: 5px;
             margin-top: 25px;
             @media screen and (min-width: 768px){
-                width: 356px;
-                height: 120px;
+                width: 270px;
+                height: 130px;
             }
             &__text{
                 position: absolute;
@@ -70,9 +68,9 @@
                 font-size: 20px;
                 line-height: 0.8;
                 @media screen and (min-width: 768px) {
-                    width: 75px;
-                    height: 75px;
-                    margin: 8px;
+                    width: 52.5px;
+                    height: 52.5px;
+                    margin: 6px;
                     font-size: 34px;
                 }
             }
@@ -80,23 +78,25 @@
             & > *:hover {
                 background-color: $color-accent-dark;
             }
-
-            &__equals {
-                width: 78px;
-                @media screen and (min-width: 768px) {
-                    width: 164px;
-                    height: 75px;
-                    margin: 8px;
+            &__button{
+                &--equals {
+                    width: 78px;
+                    @media screen and (min-width: 768px) {
+                        width: 115px;
+                        height: 52.5px;
+                        margin: 6px;
+                    }
+                }
+                &--cancel {
+                    width: 78px;
+                    @media screen and (min-width: 768px) {
+                        width: 115px;
+                        height: 52.5px;
+                        margin: 6px;
+                    }
                 }
             }
-            &__cancel {
-                width: 78px;
-                @media screen and (min-width: 768px) {
-                    width: 164px;
-                    height: 75px;
-                    margin: 8px;
-                }
-            }
+            
         }
 }
 
