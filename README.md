@@ -1,5 +1,5 @@
 # JavaScript Calculator
-This [calculator](blaisebuckland.github.io/calculator/) can perform basic mathematical operations (+,-,x,÷). The calculator can also calculate percentages and handle decimals.
+This [calculator](https://blaisebuckland.github.io/calculator/) can perform basic mathematical operations (+,-,x,÷). The calculator can also calculate percentages and handle decimals.
 
 ## Technology
 * HTML
@@ -21,4 +21,4 @@ This [calculator](blaisebuckland.github.io/calculator/) can perform basic mathem
 
 ## Links
 * [GitHub repository](https://github.com/blaisebuckland/calculator)
-* [The calculator](blaisebuckland.github.io/calculator/)
+* [The calculator](https://blaisebuckland.github.io/calculator/)
