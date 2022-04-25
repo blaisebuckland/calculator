@@ -42,39 +42,10 @@
     margin: auto;
   }
 }
-.calculator__display {
-  position: relative;
-  background-color: #F3F6F6;
-  width: 178px;
-  height: 85px;
-  border: solid 2px #F1489A;
-  border-radius: 5px;
-  margin-top: 25px;
-}
-@media screen and (min-width: 768px) {
-  .calculator__display {
-    width: 270px;
-    height: 130px;
-  }
-}
-.calculator__display__text {
-  position: absolute;
-  bottom: 10px;
-  right: 4px;
-  font-size: 26px;
-  line-height: 85%;
-  word-break: break-all;
-}
-@media screen and (min-width: 768px) {
-  .calculator__display__text {
-    font-size: 46px;
-    bottom: 20px;
-  }
-}
 .calculator__pad {
   margin: 25px;
 }
-.calculator__pad__button {
+.calculator__button {
   background-color: #F1489A;
   color: #F3F6F6;
   border-radius: 5px;
@@ -86,35 +57,65 @@
   line-height: 0.8;
 }
 @media screen and (min-width: 768px) {
-  .calculator__pad__button {
+  .calculator__button {
     width: 52.5px;
     height: 52.5px;
     margin: 6px;
     font-size: 34px;
   }
 }
-.calculator__pad__button--equals {
+.calculator__button--equals {
   width: 78px;
 }
 @media screen and (min-width: 768px) {
-  .calculator__pad__button--equals {
+  .calculator__button--equals {
     width: 115px;
     height: 52.5px;
     margin: 6px;
   }
 }
-.calculator__pad__button--cancel {
+.calculator__button--cancel {
   width: 78px;
 }
 @media screen and (min-width: 768px) {
-  .calculator__pad__button--cancel {
+  .calculator__button--cancel {
     width: 115px;
     height: 52.5px;
     margin: 6px;
   }
 }
-.calculator__pad__button:hover {
+.calculator__button:hover {
   background-color: #e60572;
+}
+
+.display {
+  position: relative;
+  background-color: #F3F6F6;
+  width: 178px;
+  height: 85px;
+  border: solid 2px #F1489A;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+@media screen and (min-width: 768px) {
+  .display {
+    width: 270px;
+    height: 130px;
+  }
+}
+.display__text {
+  position: absolute;
+  bottom: 10px;
+  right: 4px;
+  font-size: 26px;
+  line-height: 85%;
+  word-break: break-all;
+}
+@media screen and (min-width: 768px) {
+  .display__text {
+    font-size: 46px;
+    bottom: 20px;
+  }
 }
 
 .body {
