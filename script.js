@@ -1,11 +1,11 @@
 // Selectors
-const displayText = document.querySelector(".calculator__display__text");
-const numberButtons = document.querySelectorAll(".calculator__pad__button--number")
-const cancelButton = document.querySelector(".calculator__pad__button--cancel");
-const percentButton = document.querySelector(".calculator__pad__button--percent");
-const decimalButton = document.querySelector(".calculator__pad__button--decimal");
-const operatorButtons =document.querySelectorAll(".calculator__pad__button--operator");
-const equalsButton = document.querySelector(".calculator__pad__button--equals");
+const displayText = document.querySelector(".display__text");
+const numberButtons = document.querySelectorAll(".calculator__button--number")
+const cancelButton = document.querySelector(".calculator__button--cancel");
+const percentButton = document.querySelector(".calculator__button--percent");
+const decimalButton = document.querySelector(".calculator__button--decimal");
+const operatorButtons =document.querySelectorAll(".calculator__button--operator");
+const equalsButton = document.querySelector(".calculator__button--equals");
 
 // Variables
 let currentCharacter = "";
