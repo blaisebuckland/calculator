@@ -14,7 +14,7 @@ let calculationResult = "";
 let inputLengthBelowMax ="";
 const operators = ["+", "-", "x", "÷"];
 
-// Reusable functions
+// Functions
 const checkInputLength = () => {
     if (displayText.innerHTML.length < 33) {
         inputLengthBelowMax = true;
@@ -22,52 +22,26 @@ const checkInputLength = () => {
         inputLengthBelowMax = false;
     }
 }
-
-// Number buttons
-numberButtons.forEach(button => {
-    button.addEventListener(("click"), (event) => {
-        checkInputLength();
-        if (inputLengthBelowMax === true) {
-            currentCharacter = event.target.innerHTML;
-            displayText.innerHTML += currentCharacter;
-        }
-    })
-});
-
-// Operator buttons
-operatorButtons.forEach(button => {
-    button.addEventListener("click", (event) => {
-        checkInputLength();
-        if (inputLengthBelowMax === true && operators.includes(currentCharacter) === false) {
-            if (displayText.innerHTML.includes("+")== true) {
-                calculation = displayText.innerHTML.split("+");
-                calculationResult = Number(calculation[0]) + Number(calculation[1]);
-                displayText.innerHTML = `${calculationResult}${event.target.innerHTML}`;
-            }
-            else if (displayText.innerHTML.includes("-")== true) {
-                calculation = displayText.innerHTML.split("-")
-                calculationResult = Number(calculation[0]) - Number(calculation[1]);
-                displayText.innerHTML = `${calculationResult}${event.target.innerHTML}`;
-            }
-            else if (displayText.innerHTML.includes("x")== true) {
-                calculation = displayText.innerHTML.split("x")
-                calculationResult = Number(calculation[0]) * Number(calculation[1]);
-                displayText.innerHTML = `${calculationResult}${event.target.innerHTML}`;
-            }
-            else if (displayText.innerHTML.includes("÷")== true) {
-                calculation = displayText.innerHTML.split("÷")
-                calculationResult = Number(calculation[0]) / Number(calculation[1]);
-                displayText.innerHTML = `${calculationResult}${event.target.innerHTML}`;
-            } else {
-                currentCharacter = event.target.innerHTML;
-                displayText.innerHTML += event.target.innerHTML;
-            }
-        }
-    })
-})
-
-// Cancel - delete last character if pressed once, and delete all if pressed twice
-cancelButton.addEventListener("click", () => {
+const calculate = () => {
+    if (displayText.innerHTML.includes("+")== true) {
+        calculation = displayText.innerHTML.split("+");
+        calculationResult = Number(calculation[0]) + Number(calculation[1]);
+    }
+    else if (displayText.innerHTML.includes("-")== true) {
+        calculation = displayText.innerHTML.split("-")
+        calculationResult = Number(calculation[0]) - Number(calculation[1]);
+    }
+    else if (displayText.innerHTML.includes("x")== true) {
+        calculation = displayText.innerHTML.split("x")
+        calculationResult = Number(calculation[0]) * Number(calculation[1]);
+    }
+    else if (displayText.innerHTML.includes("÷")== true) {
+        calculation = displayText.innerHTML.split("÷")
+        calculationResult = Number(calculation[0]) / Number(calculation[1]);
+    } 
+    displayText.innerHTML = calculationResult;  
+}
+const cancel = () => {
     if (currentCharacter == "c") {
         displayText.innerHTML = "";
         currentCharacter = "c";
@@ -75,25 +49,27 @@ cancelButton.addEventListener("click", () => {
         displayText.innerHTML = displayText.innerHTML.slice(0, displayText.innerHTML.length-1);
         currentCharacter = "c";
     }
-});
-
-// Percent
-percentButton.addEventListener("click", () => {
+}
+const calculatePercentage = () => {
     displayText.innerHTML = displayText.innerHTML/100;
-    
-})
-
-// Decimal
-decimalButton.addEventListener(("click"), () => {
+}
+const insertDecimal = () => {
     checkInputLength();
     if (inputLengthBelowMax === true && currentCharacter != event.target.innerHTML) {
         currentCharacter = event.target.innerHTML;
         displayText.innerHTML += currentCharacter;
     }
-})
-
-// Equals
-equalsButton.addEventListener("click", (event) => {
+}
+const insertNumber = () => {
+    checkInputLength();
+        if (inputLengthBelowMax === true) {
+            currentCharacter = event.target.innerHTML;
+            displayText.innerHTML += currentCharacter;
+        }
+}
+const insertOperator = () => {
+    checkInputLength();
+    if (inputLengthBelowMax === true && operators.includes(currentCharacter) === false) {
         if (displayText.innerHTML.includes("+")== true) {
             calculation = displayText.innerHTML.split("+");
             calculationResult = Number(calculation[0]) + Number(calculation[1]);
@@ -113,6 +89,21 @@ equalsButton.addEventListener("click", (event) => {
             calculation = displayText.innerHTML.split("÷")
             calculationResult = Number(calculation[0]) / Number(calculation[1]);
             displayText.innerHTML = `${calculationResult}${event.target.innerHTML}`;
-        } 
-        displayText.innerHTML = calculationResult;  
-    })
+        } else {
+            currentCharacter = event.target.innerHTML;
+            displayText.innerHTML += event.target.innerHTML;
+        }
+    }
+}
+
+// Event listeners
+equalsButton.addEventListener("click", calculate)
+cancelButton.addEventListener("click", cancel)
+decimalButton.addEventListener(("click"), insertDecimal)
+percentButton.addEventListener("click", calculatePercentage)
+numberButtons.forEach(button => {
+    button.addEventListener(("click"), insertNumber)
+});
+operatorButtons.forEach(button => {
+    button.addEventListener("click", insertOperator)
+});
